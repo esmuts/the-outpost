@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Outpost</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!-- Link to Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body onload="loadSessionStorage()">
+    <!-- Background image (profile) -->
+    <img
+      id="about-background-image"
+      src="images/reading-bench.jpg"
+      alt="asleep on the read"
+    />
+    <div class="grid-layout">
+      <!-- Displays menu top right of viewport -->
+      <div class="fixed-header">
+        <ul class="menu">
+          Menu
+          <ul class="menu-dropdown">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="saved.html">Saved</a></li>
+          </ul>
+        </ul>
+      </div>
+      <!-- Page title area -->
+      <header>
+        <h2>About Me</h2>
+      </header>
+      <!-- Main page area -->
+      <article id="about-display">
+        <p>
+          Hello, my name is Eckard. I write book reviews. In my day job, I teach
+          literature at the
+          <a href="https://www.uwc.ac.za"> University of the Western Cape</a>,
+          and write academic research articles. If you're into that sort of
+          thing, you can have a look at my work
+          <a
+            href="https://scholar.google.com/citations?user=UHg5O34AAAAJ&hl=en"
+          >
+            here.
+          </a>
+        </p>
+        <!-- Contact form, with newsletter subscription option -->
+        <p>
+          Is there a particular book you'd like to see reviewed? Any other
+          comments or suggestions? Get in touch by filling out the form below:
+        </p>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Name..." />
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" placeholder="Email..." />
+          <label for="contact-comment">Comment:</label>
+          <textarea
+            id="contact-comment"
+            name="contact-comment"
+            rows="4"
+            placeholder="Type your comments here..."
+          ></textarea>
+          <p>Would you like to get book reviews directly in your inbox?</p>
+          <div>
+            <input type="radio" id="subscribe-yes" name="subscribe" />
+            <label for="subscribe-yes"
+              >Yes, subscribe me to the newsletter.</label
+            >
+          </div>
+          <div>
+            <input type="radio" id="subscribe-no" name="subscribe" />
+            <label for="subscribe-no">No thanks, I hate books.</label>
+          </div>
+          <input id="contact-submit" type="submit" value="Submit" />
+        </form>
+      </article>
+    </div>
+    <!-- Nav footer -->
+    <footer>
+      <a id="home" href="index.html">Home</a>
+      <a id="blog" href="blog.html">Blog</a>
+      <a id="links" href="links.html">Links</a>
+      <a id="about" href="about.html">About</a>
+      <a id="saved" href="saved.html">Saved</a>
+    </footer>
+    <!-- Link to JavaScript file-->
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+/* 
+  This file contains layout and styling for general CSS elements
+  used by multiple pages on the site.
+*/
+
+$paragraph-size: 14pt;
+
+/* General body and layout styles */
+
+body {
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  background-color: seashell;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Style for header elements */
+
+header {
+  grid-column: 1 / 13;
+  text-align: center;
+}
+
+h1 {
+  font-size: $paragraph-size + 28pt;
+}
+
+h3 {
+  text-align: center;
+}
+
+.fixed-header {
+  grid-column: 1 / 13;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  justify-content: end;
+}
+
+/* Style for menu and list items */
+
+.menu {
+  margin-right: 3rem;
+  margin-top: 1rem;
+  font-size: $paragraph-size;
+}
+
+.menu-dropdown {
+  display: none;
+}
+
+.menu:hover {
+  color: red;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for links */
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: red;
+}
+
+/* Layout and styling for article items */
+
+article {
+  grid-column: 4 / 10;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+button {
+  font-family: "Roboto Mono", monospace;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-size: $paragraph-size - 4;
+  background-color: white;
+}
+
+button:hover {
+  background-color: gainsboro;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+// Changes layout for articles when viewport width drops below 800px.
+@media screen and (max-width: 800px) {
+  article {
+    grid-column: 3 / 11;
+  }
+}
+
+/* Layout and styling for forms and labels */
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 1rem;
+}
+
+label {
+  font-size: $paragraph-size - 4;
+}
+
+// I am taking my lead here from the W3Schools guide to styling forms.
+// Please see the website link above.
+input[type="text"],
+textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+  // What, precisely, does "box-sizing: border-box" do? Ask mentor.
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: $paragraph-size - 2;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  margin: auto;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  font-size: $paragraph-size - 2;
+  background-color: white;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+input[type="email"] {
+  margin: auto;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  font-size: $paragraph-size - 2;
+  background-color: white;
+}
+
+/* Style and layout for footer elements */
+
+footer {
+  bottom: 1rem;
+  padding: 1rem;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+// Scales footer when viewport width drops below 800px.
+@media screen and (max-width: 800px) {
+  footer {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+// Changes footer display to flex-direction: column when viewport width drops
+// below 450px.
+@media screen and (max-width: 450px) {
+  footer {
+    margin-left: 30%;
+    margin-right: 30%;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+}

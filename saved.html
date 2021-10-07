@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!-- IFS L1T20 Capstone Project IV: JavaScript Fundamentals -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Outpost</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!-- Link to Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body onload="loadSavedPosts()">
+    <div class="grid-layout">
+      <!-- Displays menu top right of viewport -->
+      <div class="fixed-header">
+        <ul class="menu">
+          Menu
+          <ul class="menu-dropdown">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="saved.html">Saved</a></li>
+          </ul>
+        </ul>
+      </div>
+      <!-- Page heading area -->
+      <header>
+        <h2>Saved Items</h2>
+      </header>
+    </div>
+    <!-- Nav footer -->
+    <footer>
+      <a id="home" href="index.html">Home</a>
+      <a id="blog" href="blog.html">Blog</a>
+      <a id="links" href="links.html">Links</a>
+      <a id="about" href="about.html">About</a>
+      <a id="saved" href="saved.html">Saved</a>
+    </footer>
+    <!-- Link to JavaScript file -->
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

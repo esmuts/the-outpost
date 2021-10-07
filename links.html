@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<!--
+  Background image by Rachel Lees on Unsplash:
+  https://www.unsplash.com
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Outpost</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!-- Link to Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body onload="loadSessionStorage()">
+    <div class="grid-layout">
+      <!-- Displays menu top right of viewport -->
+      <div class="fixed-header">
+        <ul class="menu">
+          Menu
+          <ul class="menu-dropdown">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="saved.html">Saved</a></li>
+          </ul>
+        </ul>
+      </div>
+      <div id="link-display">
+        <!-- Header area for "Links" page. -->
+        <header>
+          <h2>Book Links</h2>
+          <h3>
+            <em>Free stuff to read from around the web.</em>
+          </h3>
+        </header>
+        <!-- Links and link description display area -->
+        <a href="https://kalaharireview.com/about" class="link-title"
+          >Kalahari Review</a
+        >
+        <p class="link-description">
+          A cool place to discover and read new short fiction and poetry from
+          all over Africa.
+        </p>
+        <a href="https://johannesburgreviewofbooks.com" class="link-title">
+          Johannesburg Review of Books
+        </a>
+        <p class="link-description">
+          South Africa's very own "review of books". Critical African
+          perspectives on literature from around the world. They often feature
+          excerpts of newly published local books.
+        </p>
+        <a href="https://electricliterature.com" class="link-title"
+          >Electric Literature</a
+        >
+        <p class="link-description">
+          A popular literary journal with "the mission to make literature more
+          exciting, relevant, and inclusive." Excellent content and reading
+          lists for every taste.
+        </p>
+        <a href="https://openlibrary.org" class="link-title">Open Library</a>
+        <p class="link-description">
+          A truly vast, one-stop digital library. Their aim is to have a page
+          for "every book ever published". Good support for blind and dyslexic
+          readers.
+        </p>
+        <a href="https://www.theparisreview.org" class="link-title">
+          The Paris Review Redux Archives
+        </a>
+        <p class="link-description">
+          Each week, the distinguished Paris Review lifts their paywall on
+          selected interviews, stories and poems. Find the liberated literature
+          here.
+        </p>
+        <a href="https://www.complete-review.com" class="link-title"
+          >Complete Review</a
+        >
+        <p class="link-description">
+          Michael Orthofer has been reviewing books, and collecting review
+          aggregates, since 1999. You're sure to find fresh and unusual
+          recommendations here. The quaint style is part of the site's charm.
+        </p>
+        <a href="https://klyntji.com/ons-klyntji" class="link-title"
+          >Ons Klyntji</a
+        >
+        <p class="link-description">
+          An independent, progressive literary zine and web journal with a
+          pedigree stretching back to 1896. Mostly Afrikaans, but they encourage
+          submissions in other languages too.
+        </p>
+      </div>
+    </div>
+    <!-- Nav footer -->
+    <footer>
+      <a id="home" href="index.html">Home</a>
+      <a id="blog" href="blog.html">Blog</a>
+      <a id="links" href="links.html">Links</a>
+      <a id="about" href="about.html">About</a>
+      <a id="saved" href="saved.html">Saved</a>
+    </footer>
+    <!-- LInk to JavaScript file -->
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

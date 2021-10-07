@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<!--
+  Thumbs up icon from Wikimedia Commons:
+  Font Awesome, Public domain, via Wikimedia Commons
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Outpost</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!-- Link to Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body onload="loadSessionStorage()">
+    <div class="grid-layout">
+      <!-- Displays menu top right of viewport -->
+      <div class="fixed-header">
+        <ul class="menu">
+          Menu
+          <ul class="menu-dropdown">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="saved.html">Saved</a></li>
+          </ul>
+        </ul>
+      </div>
+      <!-- Link used to close full post display by reloading this page -->
+      <a id="close-post" href="blog.html">Close</a>
+      <!-- Main article area -->
+      <!-- Blog post entry -->
+      <article id="jennings-island">
+        <h2 class="post-title">Island Memories</h2>
+        <p class="post-date">September 17, 2021</p>
+        <img
+          class="post-image"
+          src="images/books/jennings-island.jpg"
+          alt="An Island by Karen Jennings"
+        />
+        <div class="post-text">
+          <div class="visible-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
+              urna at tortor consequat tincidunt. Integer venenatis, dolor non
+              laoreet suscipit, nibh purus pharetra ligula, vel molestie tellus
+              orci et ligula. Aenean scelerisque vel risus ac hendrerit. Nulla
+              sed erat vel sem pretium luctus. In lorem dui, cursus faucibus
+              orci ut, ultrices efficitur eros. Proin ornare, turpis nec feugiat
+              hendrerit, quam risus finibus est, nec vehicula nisi turpis sit
+              amet augue.
+            </p>
+            <p>
+              Etiam laoreet erat id felis eleifend, a iaculis lectus fermentum.
+              Vestibulum sagittis ex elementum augue semper interdum. Nunc
+              turpis felis, luctus id ultricies vel, sodales feugiat arcu. Donec
+              in sem a ipsum lobortis pellentesque. Vivamus vel interdum felis,
+              sed rutrum turpis. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+          </div>
+          <div class="hidden-text">
+            <p>
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia curae; Integer at ex turpis. Aliquam sed aliquam
+              ligula. In pretium ac felis et vulputate. Mauris augue urna,
+              tincidunt non tristique sed, pharetra eu magna. Nulla eu lorem
+              vitae ex pretium lobortis. Donec ex orci, fringilla eget felis ut,
+              posuere pretium ante. Cras a neque placerat, volutpat metus sit
+              amet, convallis erat.
+            </p>
+            <p>
+              Aenean et enim lectus. Suspendisse pellentesque accumsan risus sit
+              amet consequat. Nunc sagittis nisi sollicitudin nisi consectetur,
+              sed egestas diam consequat. Duis id eleifend nulla, ut congue
+              nisl. Nam congue condimentum ligula, eu bibendum magna ultricies
+              a. Fusce facilisis arcu sapien, commodo convallis mauris gravida
+              non.
+            </p>
+            <p>
+              Morbi non mollis magna, fringilla bibendum ante. Proin lobortis
+              metus suscipit consectetur feugiat. Nulla facilisi. Praesent
+              porttitor purus vitae lectus euismod, vitae dignissim velit
+              vehicula. Ut varius sed lacus ac hendrerit. Proin faucibus, orci a
+              hendrerit elementum, mauris justo eleifend libero, ac imperdiet
+              ante nibh ut enim. Vestibulum luctus volutpat nisl, sit amet
+              mollis felis congue vitae. Quisque non posuere elit.
+            </p>
+          </div>
+        </div>
+        <!-- Buttons and like icon for blog post -->
+        <div class="post-buttons">
+          <!-- Thumbs-up image solidifies when clicked -->
+          <img
+            class="like"
+            src="https://upload.wikimedia.org/wikipedia/commons/2/21/Font_Awesome_5_regular_thumbs-up.svg"
+            alt="thumbs up"
+          />
+          <button>Read More</button>
+          <button>Save for later</button>
+        </div>
+        <!-- Comment form only displayed in full post view -->
+        <form class="hidden-comment">
+          <label for="comment">Comment</label>
+          <textarea id="comment" name="comment" rows="4"> </textarea>
+          <input id="comment-submit" type="submit" value="Submit" />
+        </form>
+      </article>
+      <!-- Blog post entry -->
+      <article id="coovadia-spy">
+        <h2 class="post-title">A Romp in Time</h2>
+        <p class="post-date">September 3, 2021</p>
+        <img
+          class="post-image"
+          src="images/books/coovadia-spy.jpg"
+          alt="A Spy in Time by Imraan Coovadia"
+        />
+        <div class="post-text">
+          <div class="visible-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
+              urna at tortor consequat tincidunt. Integer venenatis, dolor non
+              laoreet suscipit, nibh purus pharetra ligula, vel molestie tellus
+              orci et ligula. Aenean scelerisque vel risus ac hendrerit. Nulla
+              sed erat vel sem pretium luctus. In lorem dui, cursus faucibus
+              orci ut, ultrices efficitur eros. Proin ornare, turpis nec feugiat
+              hendrerit, quam risus finibus est, nec vehicula nisi turpis sit
+              amet augue.
+            </p>
+            <p>
+              Etiam laoreet erat id felis eleifend, a iaculis lectus fermentum.
+              Vestibulum sagittis ex elementum augue semper interdum. Nunc
+              turpis felis, luctus id ultricies vel, sodales feugiat arcu. Donec
+              in sem a ipsum lobortis pellentesque. Vivamus vel interdum felis,
+              sed rutrum turpis. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+          </div>
+          <div class="hidden-text">
+            <p>
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia curae; Integer at ex turpis. Aliquam sed aliquam
+              ligula. In pretium ac felis et vulputate. Mauris augue urna,
+              tincidunt non tristique sed, pharetra eu magna. Nulla eu lorem
+              vitae ex pretium lobortis. Donec ex orci, fringilla eget felis ut,
+              posuere pretium ante. Cras a neque placerat, volutpat metus sit
+              amet, convallis erat.
+            </p>
+            <p>
+              Aenean et enim lectus. Suspendisse pellentesque accumsan risus sit
+              amet consequat. Nunc sagittis nisi sollicitudin nisi consectetur,
+              sed egestas diam consequat. Duis id eleifend nulla, ut congue
+              nisl. Nam congue condimentum ligula, eu bibendum magna ultricies
+              a. Fusce facilisis arcu sapien, commodo convallis mauris gravida
+              non.
+            </p>
+            <p>
+              Morbi non mollis magna, fringilla bibendum ante. Proin lobortis
+              metus suscipit consectetur feugiat. Nulla facilisi. Praesent
+              porttitor purus vitae lectus euismod, vitae dignissim velit
+              vehicula. Ut varius sed lacus ac hendrerit. Proin faucibus, orci a
+              hendrerit elementum, mauris justo eleifend libero, ac imperdiet
+              ante nibh ut enim. Vestibulum luctus volutpat nisl, sit amet
+              mollis felis congue vitae. Quisque non posuere elit.
+            </p>
+          </div>
+        </div>
+        <!-- Buttons and like icon for blog post -->
+        <div class="post-buttons">
+          <!-- Thumbs-up image solidifies when clicked -->
+          <img
+            class="like"
+            src="https://upload.wikimedia.org/wikipedia/commons/2/21/Font_Awesome_5_regular_thumbs-up.svg"
+            alt="thumbs up"
+          />
+          <button>Read More</button>
+          <button>Save for later</button>
+        </div>
+        <!-- Comment form only displayed in full post view -->
+        <form class="hidden-comment">
+          <label for="comment">Comment</label>
+          <textarea id="comment" name="comment" rows="4"> </textarea>
+          <input id="comment-submit" type="submit" value="Submit" />
+        </form>
+        <!-- Blog post entry -->
+      </article>
+      <article id="ntshanga-triangulum">
+        <h2 class="post-title">Signs of the Future</h2>
+        <p class="post-date">August 24, 2021</p>
+        <img
+          class="post-image"
+          src="images/books/ntshanga-triangulum.jpg"
+          alt="Triangulum by Masande Ntshanga"
+        />
+        <div class="post-text">
+          <div class="visible-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
+              urna at tortor consequat tincidunt. Integer venenatis, dolor non
+              laoreet suscipit, nibh purus pharetra ligula, vel molestie tellus
+              orci et ligula. Aenean scelerisque vel risus ac hendrerit. Nulla
+              sed erat vel sem pretium luctus. In lorem dui, cursus faucibus
+              orci ut, ultrices efficitur eros. Proin ornare, turpis nec feugiat
+              hendrerit, quam risus finibus est, nec vehicula nisi turpis sit
+              amet augue.
+            </p>
+            <p>
+              Etiam laoreet erat id felis eleifend, a iaculis lectus fermentum.
+              Vestibulum sagittis ex elementum augue semper interdum. Nunc
+              turpis felis, luctus id ultricies vel, sodales feugiat arcu. Donec
+              in sem a ipsum lobortis pellentesque. Vivamus vel interdum felis,
+              sed rutrum turpis. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+          </div>
+          <div class="hidden-text">
+            <p>
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia curae; Integer at ex turpis. Aliquam sed aliquam
+              ligula. In pretium ac felis et vulputate. Mauris augue urna,
+              tincidunt non tristique sed, pharetra eu magna. Nulla eu lorem
+              vitae ex pretium lobortis. Donec ex orci, fringilla eget felis ut,
+              posuere pretium ante. Cras a neque placerat, volutpat metus sit
+              amet, convallis erat.
+            </p>
+            <p>
+              Aenean et enim lectus. Suspendisse pellentesque accumsan risus sit
+              amet consequat. Nunc sagittis nisi sollicitudin nisi consectetur,
+              sed egestas diam consequat. Duis id eleifend nulla, ut congue
+              nisl. Nam congue condimentum ligula, eu bibendum magna ultricies
+              a. Fusce facilisis arcu sapien, commodo convallis mauris gravida
+              non.
+            </p>
+            <p>
+              Morbi non mollis magna, fringilla bibendum ante. Proin lobortis
+              metus suscipit consectetur feugiat. Nulla facilisi. Praesent
+              porttitor purus vitae lectus euismod, vitae dignissim velit
+              vehicula. Ut varius sed lacus ac hendrerit. Proin faucibus, orci a
+              hendrerit elementum, mauris justo eleifend libero, ac imperdiet
+              ante nibh ut enim. Vestibulum luctus volutpat nisl, sit amet
+              mollis felis congue vitae. Quisque non posuere elit.
+            </p>
+          </div>
+        </div>
+        <!-- Buttons and like icon for blog post -->
+        <div class="post-buttons">
+          <!-- Thumbs-up image solidifies when clicked -->
+          <img
+            class="like"
+            src="https://upload.wikimedia.org/wikipedia/commons/2/21/Font_Awesome_5_regular_thumbs-up.svg"
+            alt="thumbs up"
+          />
+          <button>Read More</button>
+          <button>Save for later</button>
+        </div>
+        <!-- Comment form only displayed in full post view -->
+        <form class="hidden-comment">
+          <label for="comment">Comment</label>
+          <textarea id="comment" name="comment" rows="4"> </textarea>
+          <input id="comment-submit" type="submit" value="Submit" />
+        </form>
+      </article>
+    </div>
+    <!-- Nav footer -->
+    <footer>
+      <a id="home" href="index.html">Home</a>
+      <a id="blog" href="blog.html">Blog</a>
+      <a id="links" href="links.html">Links</a>
+      <a id="about" href="about.html">About</a>
+      <a id="saved" href="saved.html">Saved</a>
+    </footer>
+    <!-- Link to JavaScript file -->
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

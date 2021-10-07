@@ -1,0 +1,467 @@
+@charset "UTF-8";
+/* 
+IFS L1T20 Capstone Project IV: JavaScript Fundamentals 
+
+I have consulted the following websites for guidance:
+Remove styling from lists – 
+https://www.w3schools.com/howto/howto_css_list_without_bullets.asp
+@media queries –
+https://css-tricks.com/a-complete-guide-to-css-media-queries/
+Wrapping an image in a div to center it properly –
+https://stackoverflow.com/questions/12665368/center-image-in-html-viewport-without-javascript
+Creating forms – 
+https://www.w3schools.com/howto/howto_css_contact_form.asp
+Adding margins to anchors –
+https://stackoverflow.com/questions/11969427/margin-bottom-for-a-link-elements
+Button animation:
+https://www.w3schools.com/css/css3_buttons.asp
+*/
+/* Note: CSS items are arranged according to the .html files they refer to. */
+/* 
+  This file contains layout and styling for general CSS elements
+  used by multiple pages on the site.
+*/
+/* General body and layout styles */
+body {
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  background-color: seashell;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Style for header elements */
+header {
+  grid-column: 1/13;
+  text-align: center;
+}
+
+h1 {
+  font-size: 42pt;
+}
+
+h3 {
+  text-align: center;
+}
+
+.fixed-header {
+  grid-column: 1/13;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  justify-content: end;
+}
+
+/* Style for menu and list items */
+.menu {
+  margin-right: 3rem;
+  margin-top: 1rem;
+  font-size: 14pt;
+}
+
+.menu-dropdown {
+  display: none;
+}
+
+.menu:hover {
+  color: red;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for links */
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: red;
+}
+
+/* Layout and styling for article items */
+article {
+  grid-column: 4/10;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+button {
+  font-family: "Roboto Mono", monospace;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-size: 10pt;
+  background-color: white;
+}
+
+button:hover {
+  background-color: gainsboro;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+@media screen and (max-width: 800px) {
+  article {
+    grid-column: 3/11;
+  }
+}
+/* Layout and styling for forms and labels */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 1rem;
+}
+
+label {
+  font-size: 10pt;
+}
+
+input[type=text],
+textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 12pt;
+  resize: vertical;
+}
+
+input[type=submit] {
+  margin: auto;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  font-size: 12pt;
+  background-color: white;
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+}
+
+input[type=email] {
+  margin: auto;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  font-size: 12pt;
+  background-color: white;
+}
+
+/* Style and layout for footer elements */
+footer {
+  bottom: 1rem;
+  padding: 1rem;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media screen and (max-width: 450px) {
+  footer {
+    margin-left: 30%;
+    margin-right: 30%;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+}
+/* Styling and layout for "Home" page (index.html) */
+#main-subtitle {
+  margin-top: 0;
+}
+
+#current-read {
+  grid-column: 3/6;
+  text-align: center;
+}
+
+#current-read img {
+  height: 25vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 4px double black;
+  padding: 1rem;
+}
+
+#current-read form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem;
+}
+
+#blog-roll {
+  grid-column: 7/11;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+.blog-roll-item {
+  display: flex;
+  border: 1px solid black;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.blog-roll-item img {
+  height: 15vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.blog-roll-item a {
+  margin: auto;
+  font-style: italic;
+  font-size: 11pt;
+}
+
+@media screen and (max-width: 900px) {
+  #current-read {
+    grid-column: 4/10;
+  }
+
+  #blog-roll {
+    grid-column: 4/10;
+  }
+}
+/* Styling and layout for "Blog" page (blog.html) */
+.post-title {
+  margin-top: 3rem;
+}
+
+.post-date {
+  font-style: italic;
+  font-size: 11pt;
+}
+
+.post-image {
+  width: 120px;
+  float: left;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+
+.post-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.post-buttons {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.hidden-text {
+  display: none;
+}
+
+.hidden-comment {
+  display: none;
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: center;
+  font-size: 16pt;
+}
+
+.hidden-comment label {
+  text-align: center;
+  font-size: 12pt;
+}
+
+.fullpost {
+  position: relative;
+  background-color: dimgray;
+  color: white;
+}
+
+#close-post {
+  display: none;
+  position: fixed;
+  bottom: 20%;
+  right: 10%;
+  font-size: 14pt;
+}
+
+.like {
+  position: absolute;
+  height: 2vh;
+  left: 0%;
+  bottom: 20%;
+}
+
+.like:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  #close-post {
+    right: 4%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .post-buttons {
+    gap: 0.5rem;
+  }
+}
+/* Styling and layout for About page */
+#about-background-image {
+  background-position: center 0px;
+  background-size: contain;
+  position: fixed;
+  z-index: -3;
+  opacity: 0.2;
+}
+
+#about-display {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+#about-display a:link {
+  text-decoration: underline;
+}
+
+/* Styling and layout for "Links" page */
+#link-display {
+  grid-column: 4/10;
+}
+
+#link-display h2 {
+  font-size: 20pt;
+}
+
+#link-display h3 {
+  font-size: 13pt;
+}
+
+.link-title {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 14pt;
+}
+
+.link-description {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-size: 10pt;
+  margin-bottom: 1.5rem;
+}
+
+#link-display a {
+  text-decoration: underline;
+}
+
+/* Styling and layout for "Saved" page */
+header ~ section:nth-child(odd) {
+  grid-column: 1/7;
+}
+
+header ~ section:nth-child(even) {
+  grid-column: 7/13;
+}
+
+.saved-item {
+  display: grid;
+  grid-template-columns: repeat 5, 1fr;
+  grid-template-rows: auto 25vh;
+  grid-gap: 1rem;
+  margin: 1rem;
+}
+
+.saved-item p {
+  grid-column: 1/6;
+  text-align: center;
+  background-color: gainsboro;
+  border: 1px solid gainsboro;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.saved-item img {
+  grid-column: 1/3;
+  height: 100%;
+  margin: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.saved-item div {
+  grid-column: 3/6;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+  header ~ section:nth-child(odd) {
+    grid-column: 1/13;
+  }
+
+  header ~ section:nth-child(even) {
+    grid-column: 1/13;
+  }
+}
+/* Styling for "Blog" page items */
+.post-image {
+  width: 120px;
+  float: left;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+
+.post-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 11pt;
+  font-weight: 200;
+}/*# sourceMappingURL=style.css.map */
