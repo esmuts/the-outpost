@@ -1,2 +1,2 @@
 # the-outpost
-A book blog.
+A book blog
