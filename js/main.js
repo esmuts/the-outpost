@@ -60,7 +60,7 @@ $(".menu").click(function () {
   $(this).css("color", "black");
   $(".menu-dropdown").slideDown();
 });
-$(".menu ul").mouseleave(function () {
+$(".menu").mouseleave(function () {
   $(".menu-dropdown").slideUp();
 });
 
