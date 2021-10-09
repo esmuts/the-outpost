@@ -53,13 +53,13 @@ h3 {
   position: fixed;
   top: 0;
   width: 100vw;
-  justify-content: end;
 }
 
 /* Style for menu and list items */
 .menu {
-  margin-right: 3rem;
-  margin-top: 1rem;
+  position: absolute;
+  right: 3rem;
+  top: 1rem;
   font-size: 14pt;
 }
 
@@ -78,6 +78,16 @@ ul {
   padding: 0;
 }
 
+@media screen and (max-width: 600px) {
+  .menu {
+    right: 2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .menu {
+    right: 1rem;
+  }
+}
 /* Styling for links */
 a:link {
   text-decoration: none;
